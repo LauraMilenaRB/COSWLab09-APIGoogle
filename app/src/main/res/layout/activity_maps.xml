@@ -1,0 +1,80 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:orientation="vertical"
+tools:context="cosw.eci.edu.googleapi.MapsActivity">
+
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <fragment
+            android:id="@+id/map"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="377dp"
+            android:layout_height="559dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_weight="1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.444"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/newLocation"
+            android:layout_width="198dp"
+            android:layout_height="45dp"
+            android:layout_gravity="end|bottom"
+            android:layout_marginBottom="16dp"
+            android:layout_marginStart="32dp"
+            android:onClick="NewLocation"
+            android:src="@android:drawable/ic_input_add"
+            app:backgroundTint="@android:color/holo_blue_dark"
+            app:elevation="@dimen/cast_intro_overlay_button_margin_bottom"
+            app:fabSize="mini"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/find_address"
+            android:layout_width="147dp"
+            android:layout_height="44dp"
+            android:layout_marginBottom="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="@color/colorPrimary"
+            android:onClick="onFindAddressClicked"
+            android:text="@string/find_address"
+            android:textColor="@android:color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/input_address"
+            android:layout_width="326dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:hint="@string/addreess"
+            android:padding="10dp"
+            android:shadowColor="@android:color/holo_orange_dark"
+            android:textColor="@android:color/black"
+            android:textColorHighlight="@android:color/holo_blue_bright"
+            android:textColorHint="@android:color/holo_blue_bright"
+            android:textSize="18sp"
+            android:visibility="visible"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/map"
+            tools:shadowColor="@android:color/holo_purple"
+            tools:visibility="visible" />
+
+    </android.support.constraint.ConstraintLayout>
+
+</LinearLayout>
+
+
+
